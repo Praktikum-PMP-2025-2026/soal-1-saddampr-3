@@ -46,12 +46,20 @@ int main (){
     Artefak *daftarArtefak  = (Artefak *)malloc(N * sizeof(Artefak));
 
     for (int i = 0; i < N; i++){
-        scanf("%s %s %d %d",daftarArtefak[i].nama,daftarArtefak[i].kategori,&daftarArtefak[i].tahun,&daftarArtefak[i].nilai);
+        scanf("%s %s %d %d",
+                daftarArtefak[i].nama,
+                daftarArtefak[i].kategori,
+                &daftarArtefak[i].tahun,
+                &daftarArtefak[i].nilai);
     }
     qsort(daftarArtefak, N, sizeof(Artefak), UrutArtefak);
 
-    for (int i = 0; i<N; i++){
-        printf("%s %s %d %d\n ",daftarArtefak[i].nama,daftarArtefak[i].kategori,daftarArtefak[i].tahun,daftarArtefak[i].nilai);
+    for (int i = 0; i < N; i++) {
+        printf("%s %s %d %d\n", 
+               daftarArtefak[i].nama, 
+               daftarArtefak[i].kategori, 
+               daftarArtefak[i].tahun, 
+               daftarArtefak[i].nilai);
     }
 
     free(daftarArtefak);
